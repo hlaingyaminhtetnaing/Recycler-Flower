@@ -15,6 +15,11 @@ class MainActivity : AppCompatActivity() {
         var flowerlist = ArrayList<Flower>()
         flowerlist.add(Flower("Daisy", 32.0, R.drawable.raisy))//R.=Int
         flowerlist.add(Flower("Rose", 32.0, R.drawable.rose_flower))
+        flowerlist.add(Flower("Jasmine",30.00,R.drawable.jasmine))
+        flowerlist.add(Flower("Lee",30.00,R.drawable.lee))
+        flowerlist.add(Flower("Lotus",30.00,R.drawable.lotus))
+        flowerlist.add(Flower("Gardenia",30.00,R.drawable.gardenia))
+
 
         var flowerAdapter=FlowerAdapter(flowerlist)
         flowerRecycler.layoutManager=LinearLayoutManager(this)
