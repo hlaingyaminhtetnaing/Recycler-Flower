@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
 
         var flowerAdapter=FlowerAdapter(flowerlist)
-        flowerRecycler.layoutManager=LinearLayoutManager(this)
+        flowerRecycler.layoutManager=LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
         flowerRecycler.adapter=flowerAdapter
     }
 }
