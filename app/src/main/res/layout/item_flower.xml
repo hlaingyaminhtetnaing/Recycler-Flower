@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="8dp"
-    app:cardCornerRadius="4dp"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="4dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -20,24 +20,32 @@
 
         <TextView
             android:id="@+id/txtName"
+            style="@style/textStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintLeft_toRightOf="@+id/imgFlower"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtPriceLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:layout_marginLeft="20dp"
+            android:text="Price :"
             style="@style/textStyle"
-            app:layout_constraintLeft_toRightOf="@+id/imgFlower"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginStart="20dp" />
+            app:layout_constraintLeft_toLeftOf="@id/txtName"
+            app:layout_constraintTop_toBottomOf="@id/txtName" />
 
         <TextView
             android:id="@+id/txtPrice"
+            style="@style/textStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="70dp"
-            style="@style/textStyle"
-            android:layout_marginTop="50dp"
-            app:layout_constraintLeft_toRightOf="@id/imgFlower"
-            app:layout_constraintTop_toBottomOf="@id/txtName"
-            android:layout_marginStart="70dp" />
+            android:layout_marginTop="30dp"
+            app:layout_constraintLeft_toRightOf="@id/txtPriceLabel"
+            app:layout_constraintTop_toBottomOf="@id/txtName" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
